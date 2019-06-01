@@ -101,15 +101,17 @@ header ul:after {
 }
 
 
-.talk_content {
+.post_content {
   background-color: #fff;
   text-align: center;
   margin : auto ;
-  height: 200px;
-  width: 500px;
   padding: 10px;
 }
 
+.post_content textarea {
+  height: 100px;
+  width: 100%;
+}
 
 .confirm-text {
   height: auto;
