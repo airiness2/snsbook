@@ -2,6 +2,8 @@ class PostsController < ApplicationController
     
   before_action :set_post, only: [:show, :edit, :update, :destroy]
   
+  before_action :sign_in_user
+  
   def index
     @posts = Post.all
   end
@@ -60,5 +62,8 @@ class PostsController < ApplicationController
     @post = Post.find(params[:id])
   end
   
+  def sign_in_user
+    redirect_to new_session_path unless logged_in?
+  end
 
 end
