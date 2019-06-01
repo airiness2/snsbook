@@ -16,6 +16,7 @@ class PostsController < ApplicationController
   
   def create
     @post = Post.new(post_params)
+    @post.user_id = current_user.id
     if @post.save
       redirect_to posts_path, notice: "ブログを作成しました!"
     else
@@ -24,15 +25,12 @@ class PostsController < ApplicationController
   end
   
   def show
-    @post = Post.find(params[:id])
   end
   
   def edit
-    @post = Post.find(params[:id])
   end
   
   def update
-    @post = Post.find(params[:id])
     if @post.update(post_params)
       redirect_to posts_path, notice: "ブログを編集しました！"
     else
@@ -48,13 +46,14 @@ class PostsController < ApplicationController
   
   def confirm
     @post = Post.new(post_params)
+    @post.user_id = current_user.id
     render :new if @post.invalid?
   end
   
   private
   
   def post_params
-    params.require(:post).permit(:title, :content)
+    params.require(:post).permit(:content, :user_id, :image, :image_cache)
   end
   
   def set_post
