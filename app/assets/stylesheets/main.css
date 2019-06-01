@@ -1,0 +1,145 @@
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  text-align: center;
+}
+
+.main-header {
+  padding-bottom: 15%;
+  width: 100%;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+/* ここから */
+header {
+    background-color: #000080;
+    height: 50px;
+    width: 100%;
+    margin: auto;
+    padding: 5px;
+}
+
+header a {
+  text-decoration:  none;
+  color: #fff;
+  padding: 10px;
+}
+
+header ul {
+  display: flex;
+  padding-left: 33%;
+  padding-right: 33%;
+  justify-content: space-between;
+}
+
+header ul a {
+  text-decoration:  none;
+  color: #fff;
+}
+
+header li {
+    list-style:none;
+    padding: 10px;
+}
+
+header .left {
+  float: left;
+  width: auto;
+}
+
+header .right {
+  float: right;
+  width: auto;
+}
+
+header ul:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.line {
+  margin: 10px;
+  padding: 20px;
+  background-color: green;
+  width: 100%;
+}
+
+.linkpage {
+    float: left;
+    width: 33%;
+}
+
+.linkpage li {
+    font-size: small;
+    text-align: left;
+    list-style:none;
+    padding: 10px;
+}
+
+
+.postlist {
+  background-color: #fff;
+  text-align: center;
+  margin : auto ;
+  height: 700px;
+  width: 500px;
+  padding: 10px;
+  padding-bottom: 200px;
+  float: left;
+}
+
+.postlist th {
+  border: solid 1px #D3D3D3;
+  box-shadow:0px 0px 5px 3px rgba(0, 0, 0, 0.2) inset;
+}
+
+.postlist a {
+  text-decoration:  none;
+}
+
+
+.talk_content {
+  background-color: #fff;
+  text-align: center;
+  margin : auto ;
+  height: 200px;
+  width: 500px;
+  padding: 10px;
+}
+
+
+.confirm-text {
+  height: auto;
+  width: auto;
+  text-align: center;
+  margin: auto;
+}
+
+.push {
+  height: 50px;
+}
+
+.friends {
+}
+
+.friends li {
+    font-size: small;
+    text-align: left;
+    list-style:none;
+    padding: 10px;
+}
+
+.friends ul:after {
+    clear: both;
+}
+
+.clearfix:after {
+    content: "";
+    display: block;
+    clear: both;
+}

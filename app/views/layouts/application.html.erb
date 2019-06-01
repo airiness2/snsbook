@@ -9,21 +9,52 @@
   </head>
 
   <body>
+  <header>
+    <ul>
     
+    <% if logged_in? %>
+      <li><%= image_tag 'f.png' %></li>
+      <li><%= link_to "Profile", user_path(current_user.id) %></li>
+      <li><%= link_to "ホーム", posts_path %></li>
+      <li><a href="#">友達を検索</a></li>
+      <li><%= link_to "Logout", session_path(current_user.id), method: :delete %></li>
+
+    <% else %>
+      <li><%= link_to "Sign up", new_user_path %></li>
+      <li><%= link_to "Login", new_session_path %></li>
+    <% end %>
+    
+    </ul>
+    
+    </div>
+  </header>
+  
+<!--  <nav class="navbar navbar-dark mb-1 navbar-fixed-top " style="background-color:#000080;"> 
+    <% if logged_in? %>
+    <a href="#" class="navbar-text">Facebook</a>
+
+      <%= link_to "Profile", user_path(current_user.id), class: "navbar-text" %>
+      <%= link_to "ホーム", posts_path,  class: "navbar-text" %>
+      <a href="#" class="navbar-text">友達を検索</a>
+      <%= link_to "Logout", session_path(current_user.id), method: :delete, class: "navbar-text" %>
+
+    <% else %>
+      <%= link_to "Sign up", new_user_path %>
+      <%= link_to "Login", new_session_path %>
+    <% end %>
+    </div>
+  </nav>  -->
+
+
+    <div class="container">
     <% flash.each do |key, value| %>
       <%= content_tag(:div, value, class: "#{key}") %>
     <% end %>
     
-    <% if logged_in? %>
-      <%= link_to "Profile", user_path(current_user.id) %>
-      <%= link_to "Logout", session_path(current_user.id), method: :delete %>
-    <% else %>
-      <%= link_to "Sign up", new_user_path %>
-      <%= link_to "Login", new_session_path %>
 
-    <% end %>
     
     
     <%= yield %>
+    </div>
   </body>
 </html>
