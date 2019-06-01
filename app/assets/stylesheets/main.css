@@ -113,6 +113,15 @@ header ul:after {
   width: 100%;
 }
 
+.profile {
+  background-color: #000;
+  margin : 10px ;
+  padding: 50px;
+  color: #fff;
+  text-align: left;
+}
+
+
 .confirm-text {
   height: auto;
   width: auto;

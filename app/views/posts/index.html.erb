@@ -24,6 +24,10 @@
     </tr>
     <% @posts.each do |post| %>
     <tr>
+        <td colspan="3" width="400" height=auto align="left"><font size="16">
+            <%= link_to post.user.name, user_path(post.user.id) %></font></td>
+    </tr>
+    <tr>
         <td colspan="3" width="400" height=auto><%= simple_format(post.content) %></td>
         <% if post.image.present? %>
     </tr>
@@ -32,9 +36,9 @@
         <% end %>
     </tr>
     <tr>
-        <td><%= link_to '詳細を確認する', post_path(post.id) %></td>
-        <td><%= link_to "投稿を編集する", edit_post_path(post.id) %></td>
-        <td><%= link_to "投稿を削除する", post_path(post.id), method: :delete, data: { confirm: "本当に削除していいですか？"} %></td>
+        <td><%= link_to '詳細', post_path(post.id), class: "btn btn-default btn-xs" %></td>
+        <td><%= link_to "編集", edit_post_path(post.id), class: "btn btn-default btn-xs" %></td>
+        <td><%= link_to "削除", post_path(post.id), method: :delete, data: { confirm: "本当に削除していいですか？"}, class: "btn btn-default btn-xs" %></td>
     </tr>
     <% end %>
 </table>

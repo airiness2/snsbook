@@ -1,3 +1,38 @@
-<h1><%= @user.name %>のページ</h1>
 
-<p>メールアドレス: <%= @user.email %></p>
+<div class="profile">
+
+<p><font size="35"><%= @user.name %></font></p>
+
+</div>
+
+<nav class="navbar navbar-default">
+  <div class="navbar-header">
+    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#profiles">
+      <span class="sr-only">メニュー</span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+  </div>
+ 
+  <div id="profiles" class="collapse navbar-collapse navbar-right">
+    <ul class="nav navbar-nav">
+      <li><a href="">タイムライン</a></li>
+      <li><a href="">基本データ</a></li>
+      <li><a href="">友達</a></li>
+      <li><a href="">写真</a></li>
+      <li><a href="">アーカイブ</a></li>
+      <li><a href="">その他</a></li>
+    </ul>
+  </div>
+</nav>
+
+
+
+
+
+
+
