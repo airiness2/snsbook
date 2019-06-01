@@ -44,6 +44,7 @@ header ul a {
 header li {
     list-style:none;
     padding: 10px;
+    color: #fff;
 }
 
 header .left {
@@ -62,11 +63,8 @@ header ul:after {
     clear: both;
 }
 
-.line {
-  margin: 10px;
-  padding: 20px;
-  background-color: green;
-  width: 100%;
+.form-control {
+  margin: 15px;
 }
 
 .linkpage {

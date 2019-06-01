@@ -1,4 +1,5 @@
-<h1>Sign up</h1>
+<h2>新規アカウントを作成</h2>
+<h4>無料でご利用いただけます。</h4>
 
 <% if @user.errors.any? %>
   <div id="error_explanation">
@@ -11,19 +12,16 @@
   </div>
 <% end %>
 
+<div class="container">
 
-<%= form_with(model: @user, local: true) do |f| %>  
-  <%= f.label :name %>
-  <%= f.text_field :name %>
+<%= form_with(model: @user, local: true) do |f| %>
+<div class="form-inline">
+  <%= f.text_field :name, class: "form-control", placeholder: "名前", size: "60" %><br>
+  <%= f.email_field :email, class: "form-control", placeholder: "メールアドレス", size: "60" %><br>
+  <%= f.password_field :password, class: "form-control", placeholder: "パスワード", size: "60" %><br>
+  <%= f.password_field :password_confirmation, class: "form-control", placeholder: "確認用パスワード", size: "60" %><br>
 
-  <%= f.label :email %>
-  <%= f.email_field :email %>
-
-  <%= f.label :password %>
-  <%= f.password_field :password %>
-
-  <%= f.label :password_confirmation %>
-  <%= f.password_field :password_confirmation %>
-
-  <%= f.submit "Create my account" %>
+  <%= f.submit "アカウント登録", class: 'btn btn-success' %>
+</div>
 <% end %>
+</div>
