@@ -2,7 +2,7 @@
   "name": "snsbook",
   "private": true,
   "dependencies": {
-    "bootstrap": "3",
+    "bootstrap": "3.4.0",
     "jquery": "^3.4.1"
   }
 }
