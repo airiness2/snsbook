@@ -25,6 +25,11 @@
     <% @posts.each do |post| %>
     <tr>
         <td colspan="3" width="400" height=auto><%= simple_format(post.content) %></td>
+        <% if post.image.present? %>
+    </tr>
+    <tr>
+        <td colspan="3" width="400" height=auto><%= image_tag post.image.url %></td>
+        <% end %>
     </tr>
     <tr>
         <td><%= link_to '詳細を確認する', post_path(post.id) %></td>
